@@ -130,4 +130,83 @@ body {
 }
 .splitter__tip-amount p {
   color: hsl(185, 41%, 84%);
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .splitter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .splitter__bill-value, .splitter__number-people {
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+    border: 1px solid hsl(189, 41%, 97%);
+    border-radius: 5px;
+  }
+  .splitter__bill-value:hover, .splitter__number-people:hover {
+    border: 1px solid hsl(172, 67%, 45%);
+  }
+  .splitter__data {
+    width: 45%;
+  }
+  .splitter__tip .tips {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .splitter__tip .tips .tip {
+    border: 1px solid hsl(183, 100%, 15%);
+    cursor: pointer;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+  .splitter__tip .tips .tip:hover {
+    background-color: hsl(172, 67%, 45%);
+    border: 1px solid hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+  }
+  .splitter__tip .tips .tip--custom {
+    background-color: transparent;
+    border: 1px hsl(189, 41%, 97%);
+  }
+  .splitter__tip .tips .tip--custom:hover {
+    background-color: transparent;
+    border: 1px solid hsl(183, 100%, 15%);
+  }
+  .splitter__score {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px;
+    width: 45%;
+    margin-bottom: 0;
+  }
+  .splitter__score .reset {
+    cursor: pointer;
+    margin-top: auto;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+  .splitter__score .reset:hover {
+    background-color: hsl(185, 41%, 84%);
+  }
+  .splitter__summary {
+    margin-bottom: 30px;
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
