@@ -46,6 +46,8 @@ tips.forEach((tip) => {
     });
     e.target.classList.add("active");
     if (e.target.classList.contains("tip--custom")) {
+      actuallyTip = 0;
+      calcAllTip();
       tip.addEventListener("input", () => {
         actuallyTip = Number(e.target.value) / 100;
         calcAllTip();
