@@ -43,6 +43,27 @@ body {
   padding: 0 30px 30px;
   width: 100%;
 }
+.splitter__bill, .splitter__people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.splitter__bill p, .splitter__people p {
+  width: 50%;
+}
+.splitter__bill p.error, .splitter__people p.error {
+  visibility: hidden;
+  font-size: 24px;
+  color: rgba(255, 0, 0, 0.701);
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 20px;
+}
 .splitter .subtitle {
   color: hsl(186, 14%, 43%);
   font-size: 24px;
@@ -62,9 +83,16 @@ body {
           justify-content: space-between;
   font-size: 30px;
   padding: 20px;
+  width: 100%;
 }
-.splitter__bill-value .value, .splitter__number-people .value {
+.splitter__bill-value input.number, .splitter__number-people input.number {
+  background-color: transparent;
+  border: none;
   color: hsl(183, 100%, 15%);
+  font-size: 30px;
+  text-align: right;
+  width: 60%;
+  outline: none;
 }
 .splitter__bill-value div img, .splitter__number-people div img {
   width: 150%;
@@ -79,12 +107,15 @@ body {
   border: none;
   border-radius: 10px;
   color: hsl(0, 0%, 100%);
+  cursor: pointer;
   font-size: 32px;
   padding: 15px 0;
+  text-align: center;
 }
 .splitter__tip .tips .tip--custom {
   background-color: #e9f4f6;
   color: hsl(186, 14%, 43%);
+  width: 100%;
 }
 .splitter__score {
   background-color: hsl(183, 100%, 15%);
@@ -178,11 +209,13 @@ body {
   }
   .splitter__tip .tips .tip--custom {
     background-color: transparent;
-    border: 1px hsl(189, 41%, 97%);
+    border: 1px solid transparent;
+    color: hsl(172, 67%, 45%);
   }
   .splitter__tip .tips .tip--custom:hover {
     background-color: transparent;
-    border: 1px solid hsl(183, 100%, 15%);
+    border: 1px solid hsl(172, 67%, 45%);
+    color: hsl(172, 67%, 45%);
   }
   .splitter__score {
     display: -webkit-box;
@@ -209,4 +242,32 @@ body {
     margin-bottom: 30px;
     width: 100%;
   }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container {
+    width: 70%;
+  }
+}
+.splitter__tip .tips .tip.active {
+  border: 1px solid hsl(172, 67%, 45%);
+  background-color: hsl(172, 67%, 45%);
+}
+
+.splitter__tip .tips .tip.active:hover {
+  color: hsl(0, 0%, 100%);
+  cursor: default;
+}
+
+.splitter__tip .tips .tip--custom.active {
+  border: 1px solid hsl(172, 67%, 45%);
+  background-color: transparent;
+}
+
+.splitter__tip .tips .tip--custom.active:hover {
+  color: hsl(172, 67%, 45%);
 }/*# sourceMappingURL=style.css.map */
